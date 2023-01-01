@@ -48,6 +48,5 @@ class CategoryRepository {
             (event1) => event1.docs
                 .map((doc) => CategoryModel.fromJson(doc.data()))
                 .toList(),
-          );
-
+          );    
 }
