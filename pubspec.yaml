@@ -15,7 +15,9 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  fluttertoast: ^8.1.2
   provider: ^6.0.5
+  
 
   #Firbase
   firebase_core: ^2.4.1
