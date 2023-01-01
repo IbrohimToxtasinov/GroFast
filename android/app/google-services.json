@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "232270816852",
+    "project_id": "grofast-adf3d",
+    "storage_bucket": "grofast-adf3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232270816852:android:a4ab292c67fbb58fe7efc1",
+        "android_client_info": {
+          "package_name": "com.ibrohim.grofast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232270816852-sncjg4bjkblhmh7kaicrm8v0q4an743c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibrohim.grofast",
+            "certificate_hash": "dd33fb103562e75e0332b9f5bdb6b4a0953d8a26"
+          }
+        },
+        {
+          "client_id": "232270816852-lgtg38k63bterv01uqve54co2adu7svd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCE0QsRUfBWoj-yVh0GWPTmSYYeXOo4Pxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232270816852-lgtg38k63bterv01uqve54co2adu7svd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
