@@ -15,8 +15,10 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  lottie: ^2.1.0
   fluttertoast: ^8.1.2
   provider: ^6.0.5
+
   
 
   #Firbase
@@ -39,9 +41,9 @@ flutter:
 
   uses-material-design: true
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/lotties/
+    - assets/images/
 
   # fonts:
   #   - family: Schyler
