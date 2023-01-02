@@ -28,67 +28,70 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget> [
-          PageView.builder(
-            scrollDirection: Axis.horizontal,
-            controller: _controller,
-            itemCount: _pages.length,
-            onPageChanged: _onChanged,
-            itemBuilder: (context, int index) {
-              return _pages[index];
-            },
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List<Widget>.generate(_pages.length, (int index) {
-                  return AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    height: 10,
-                    width: (index == _currentPage) ? 30 : 10,
-                    margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 30),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: (index == _currentPage)
-                            ? Colors.blue
-                            : Colors.blue.withOpacity(0.5)
-                    ),
-                  );
-                }),
-              ),
-              InkWell(
-                onTap: () {
-                  if(_currentPage == (_pages.length - 1)){
-                    // Navigator.pushReplacement(
-                    //     context, MaterialPageRoute(builder: (context) => const WelcomePage()));
-                  }
-                  else {
-                    _controller.nextPage(
-                        duration: const Duration(milliseconds: 800),
-                        curve: Curves.easeInOutQuint);
-                  }
-                },
-                child: Container(
-                    height: 98,
-                    alignment: Alignment.center,
-                    width: 172,
-                    decoration: BoxDecoration(
-                      color: MyColors.c2BAF6F,
-                      borderRadius: BorderRadius.circular(35),
-                    ),
-                    child: (_currentPage == (_pages.length - 1))
-                        ? Text(button = "Get Stardred",
-                      style: const TextStyle(color: Colors.white, fontSize: 20),)
-                        : const Icon(Icons.navigate_next, size: 50, color: Colors.white,)
+      body: SafeArea(
+        child: Stack(
+          children: <Widget> [
+            PageView.builder(
+              scrollDirection: Axis.horizontal,
+              controller: _controller,
+              itemCount: _pages.length,
+              onPageChanged: _onChanged,
+              itemBuilder: (context, int index) {
+                return _pages[index];
+              },
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List<Widget>.generate(_pages.length, (int index) {
+                    return AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      height: 10,
+                      width: (index == _currentPage) ? 30 : 10,
+                      margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 30),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: (index == _currentPage)
+                              ? Colors.blue
+                              : Colors.blue.withOpacity(0.5)
+                      ),
+                    );
+                  }),
                 ),
-              ),
-              const SizedBox(height: 50,),
-            ],
-          ),
-        ],
+                InkWell(
+                  onTap: () {
+                    if(_currentPage == (_pages.length - 1)){
+                      // Navigator.pushReplacement(
+                      //     context, MaterialPageRoute(builder: (context) => const WelcomePage()));
+                    }
+                    else {
+                      _controller.nextPage(
+                          duration: const Duration(milliseconds: 800),
+                          curve: Curves.easeInOutQuint);
+                    }
+                  },
+                  child: Container(
+                      height: 98,
+                      alignment: Alignment.center,
+                      width: 172,
+                      decoration: BoxDecoration(
+                        color: MyColors.c2BAF6F,
+                        borderRadius: BorderRadius.circular(35),
+                        
+                      ),
+                      child: (_currentPage == (_pages.length - 1))
+                          ? Text(button = "Get Stardred",
+                        style: const TextStyle(color: Colors.white, fontSize: 20),)
+                          : const Icon(Icons.navigate_next, size: 50, color: Colors.white,)
+                  ),
+                ),
+                const SizedBox(height: 35,),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

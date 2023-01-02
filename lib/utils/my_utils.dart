@@ -14,3 +14,22 @@ class MyUtils {
     );
   }
 }
+
+class CustomClipath extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    double w = size.width;
+    double h = size.height;
+
+    final Path path = Path();
+
+    path.lineTo(0, h-120);
+    path.quadraticBezierTo(w*0.5, h-180, w, h-120);
+    path.lineTo(w, 0.0);
+
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
+}
