@@ -15,58 +15,53 @@ class SliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double heigth = MediaQuery.of(context).size.height;
-    return Container(
-      color: Colors.red,
-      child: Stack(
-        children: <Widget>[
-          ClipPath(
-            clipper: CustomClipath(),
-            child: Container(
-              width: double.infinity,
-              height: 600,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image:  AssetImage(image), fit: BoxFit.cover,
-                )
+    return Stack(
+      children: <Widget>[
+        ClipPath(
+          clipper: CustomClipath(),
+          child: Container(
+            width: double.infinity,
+            height: 595,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image:  AssetImage(image), fit: BoxFit.cover,
+              )
+            ),
+          ),
+        ),
+        Positioned(
+          top: 510,
+          right: 0,
+          left: 0,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 70),
+                child: Text(
+                  title,
+                  style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: MyColors.c194B38, letterSpacing: 0.7),textAlign: TextAlign.center,
+                ),
               ),
-            ),
+              const SizedBox(
+                height: 19
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Text(
+                  description,
+                  style: const TextStyle(
+                      height: 1.5,
+                      fontSize: 14,
+                      color: MyColors.c9C9C9C,
+                      fontWeight: FontWeight.w500,
+                      letterSpacing: 0.7),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
           ),
-          Positioned(
-            bottom: 200,
-            right: 0,
-            left: 0,
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 80),
-                  child: Text(
-                    title,
-                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, color: MyColors.c090F47, letterSpacing: 0.7),textAlign: TextAlign.center,
-                  ),
-                ),
-                const SizedBox(
-                  height: 16
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 80),
-                  child: Text(
-                    description,
-                    style: TextStyle(
-                        height: 1.5,
-                        fontSize: 14,
-                        color: MyColors.c090F47.withOpacity(0.45),
-                        fontWeight: FontWeight.w300,
-                        letterSpacing: 0.7),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

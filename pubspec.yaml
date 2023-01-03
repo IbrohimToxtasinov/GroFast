@@ -16,6 +16,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   lottie: ^2.1.0
+  flutter_svg: ^1.1.6
   fluttertoast: ^8.1.2
   provider: ^6.0.5
 
@@ -44,6 +45,7 @@ flutter:
   assets:
     - assets/lotties/
     - assets/images/
+    - assets/svg/
 
   # fonts:
   #   - family: Schyler

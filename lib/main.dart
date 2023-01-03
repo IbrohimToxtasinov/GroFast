@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grofast/screens/onboarding_screen/onboarding_screen.dart';
+import 'package:grofast/screens/sign_in_page/sign_in_page.dart';
 import 'package:grofast/utils/images.dart';
 import 'package:grofast/utils/my_utils.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnboardingScreen(),
+      home: const SignInPage(),
     );
   }
 }
