@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grofast/screens/home_screen/home_screen.dart';
 import 'package:grofast/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:grofast/screens/sign_in_page/sign_in_page.dart';
 import 'package:grofast/utils/images.dart';
@@ -15,11 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignInPage(),
+      home: const HomeScreen(),
     );
   }
 }

@@ -15,5 +15,9 @@ class MyImages {
   static const iconGoogleLogo = "assets/svg/google_logo.svg";
   static const iconFacebookLogo = "assets/svg/facebook_logo.svg";
   static const iconTwitterLogo = "assets/svg/twitter_logo.svg";
+  static const iconNotification = "assets/svg/notification.svg";
+  static const iconPerson = "assets/svg/person.svg";
+  static const iconSearch = "assets/svg/search.svg";
+  static const iconQrCode = "assets/svg/qr_code.svg";
 
 }
